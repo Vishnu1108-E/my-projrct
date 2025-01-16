@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Question</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-item">
+        <img src="images/love.gif" alt="Love">
+        <p>Do you love me?</p>
+        <button id="yes-button" onclick="showLetter()">Yes</button>
+        <button id="no-button" onmouseover="moveNo()">No</button>
+        <p id="feedback"></p>
+    </div>
+    <script>
+        function showLetter() {
+            window.open('letter.html', '_blank'); // Opens the final letter in a new tab
+        }
+
+        function moveNo() {
+            const noButton = document.getElementById('no-button');
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${Math.random() * 80}%`;
+            noButton.style.top = `${Math.random() * 80}%`;
+        }
+    </script>
+</body>
+</html>

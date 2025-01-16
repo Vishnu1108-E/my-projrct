@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-item">
+        <img src="images/children.gif" alt="Children">
+        <p>How many children do I want?</p>
+        <button onclick="checkAnswer('3')">3</button>
+        <button onclick="checkAnswer('2')">2</button>
+        <p id="feedback"></p>
+    </div>
+    <script>
+        function checkAnswer(answer) {
+            if (answer === '3') {
+                document.getElementById('feedback').textContent = 'Correct! 😊';
+                window.open('question3.html', '_blank'); // Opens the next question in a new tab
+            } else {
+                document.getElementById('feedback').textContent = 'Try again!';
+            }
+        }
+    </script>
+</body>
+</html>
